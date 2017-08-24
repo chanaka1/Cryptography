@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\shubhamp.GIST\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\shubhamp.GIST\\.nuget\\packages"
+    ]
+  }
+}

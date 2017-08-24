@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ChilkatDnCore" Version="9.5.0.68" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="1.1.2" />
+  </ItemGroup>
+
+</Project>
