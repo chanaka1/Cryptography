@@ -7828,11 +7828,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\shubhamp.GIST\\Documents\\Visual Studio 2017\\Projects\\Cryptography\\TestCryptography\\TestCryptography.csproj",
+      "projectUniqueName": "C:\\Users\\shubhamp.GIST\\Documents\\GitHub\\cryptography\\Cryptography\\TestCryptography\\TestCryptography.csproj",
       "projectName": "TestCryptography",
-      "projectPath": "C:\\Users\\shubhamp.GIST\\Documents\\Visual Studio 2017\\Projects\\Cryptography\\TestCryptography\\TestCryptography.csproj",
+      "projectPath": "C:\\Users\\shubhamp.GIST\\Documents\\GitHub\\cryptography\\Cryptography\\TestCryptography\\TestCryptography.csproj",
       "packagesPath": "C:\\Users\\shubhamp.GIST\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shubhamp.GIST\\Documents\\Visual Studio 2017\\Projects\\Cryptography\\TestCryptography\\obj\\",
+      "outputPath": "C:\\Users\\shubhamp.GIST\\Documents\\GitHub\\cryptography\\Cryptography\\TestCryptography\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\shubhamp.GIST\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7849,8 +7849,8 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "C:\\Users\\shubhamp.GIST\\Documents\\Visual Studio 2017\\Projects\\Cryptography\\Cryptography\\Cryptography.csproj": {
-              "projectPath": "C:\\Users\\shubhamp.GIST\\Documents\\Visual Studio 2017\\Projects\\Cryptography\\Cryptography\\Cryptography.csproj"
+            "C:\\Users\\shubhamp.GIST\\Documents\\GitHub\\cryptography\\Cryptography\\Cryptography\\Cryptography.csproj": {
+              "projectPath": "C:\\Users\\shubhamp.GIST\\Documents\\GitHub\\cryptography\\Cryptography\\Cryptography\\Cryptography.csproj"
             }
           }
         }

@@ -4,17 +4,17 @@ using System.Diagnostics;
 
 namespace TestCryptography
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            string str = "SensitiveData";
+            const string str = "SensitiveData";
             Console.WriteLine("String To Encrypt : "+str);
 
-            Stopwatch sw_encryption = new Stopwatch();
+            var sw_encryption = new Stopwatch();
 
             sw_encryption.Start();
-            string encrypt = Content.Encrypt(str);
+            var encrypt = Content.Encrypt(str);
             sw_encryption.Stop();
 
             Console.WriteLine("Time taken to encrypt  : " + sw_encryption.ElapsedMilliseconds + " milliseconds");
@@ -27,10 +27,10 @@ namespace TestCryptography
 
 
 
-            Stopwatch sw_decryption = new Stopwatch();
+            var sw_decryption = new Stopwatch();
 
             sw_decryption.Start();
-            string decrypt = Content.Decrypt(encrypt);
+            var decrypt = Content.Decrypt(encrypt);
             sw_decryption.Stop();
 
             Console.WriteLine("Decrypted String : " + decrypt);

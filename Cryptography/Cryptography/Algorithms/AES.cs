@@ -41,13 +41,13 @@ namespace Cryptography.Algorithms
             //  ECB mode does not use an IV.
             //  The length of the IV is equal to the algorithm's block size.
             //  It is NOT equal to the length of the key.
-            string ivHex = "000102030405060708090A0B0C0D0E0F";
+            const string ivHex = "000102030405060708090A0B0C0D0E0F";
             crypt.SetEncodedIV(ivHex, "hex");
 
             //  The secret key must equal the size of the key.  For
             //  256-bit encryption, the binary secret key is 32 bytes.
             //  For 128-bit encryption, the binary secret key is 16 bytes.
-            string keyHex = Keys.AES_KeyString;
+            var keyHex = Keys.AES_KeyString;
 
             crypt.SetEncodedKey(keyHex, "hex");
         }

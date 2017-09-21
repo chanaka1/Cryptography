@@ -2,7 +2,7 @@
 
 namespace Cryptography.Interfaces
 {
-    interface ICryptography
+    internal interface ICryptography
     {
         void Configure(Crypt2 crypt);
 

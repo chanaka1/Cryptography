@@ -16,3 +16,12 @@ C:\Users\shubhamp.GIST\Documents\Visual Studio 2017\Projects\Cryptography\Crypto
 C:\Users\shubhamp.GIST\Documents\Visual Studio 2017\Projects\Cryptography\Cryptography\obj\Debug\netcoreapp1.1\Cryptography.AssemblyInfo.cs
 C:\Users\shubhamp.GIST\Documents\Visual Studio 2017\Projects\Cryptography\Cryptography\obj\Debug\netcoreapp1.1\Cryptography.dll
 C:\Users\shubhamp.GIST\Documents\Visual Studio 2017\Projects\Cryptography\Cryptography\obj\Debug\netcoreapp1.1\Cryptography.pdb
+C:\Users\shubhamp.GIST\Documents\GitHub\cryptography\Cryptography\Cryptography\bin\Debug\netcoreapp1.1\Cryptography.deps.json
+C:\Users\shubhamp.GIST\Documents\GitHub\cryptography\Cryptography\Cryptography\bin\Debug\netcoreapp1.1\Cryptography.dll
+C:\Users\shubhamp.GIST\Documents\GitHub\cryptography\Cryptography\Cryptography\bin\Debug\netcoreapp1.1\Cryptography.pdb
+C:\Users\shubhamp.GIST\Documents\GitHub\cryptography\Cryptography\Cryptography\obj\Debug\netcoreapp1.1\Cryptography.csprojResolveAssemblyReference.cache
+C:\Users\shubhamp.GIST\Documents\GitHub\cryptography\Cryptography\Cryptography\obj\Debug\netcoreapp1.1\Cryptography.csproj.CoreCompileInputs.cache
+C:\Users\shubhamp.GIST\Documents\GitHub\cryptography\Cryptography\Cryptography\obj\Debug\netcoreapp1.1\Cryptography.AssemblyInfoInputs.cache
+C:\Users\shubhamp.GIST\Documents\GitHub\cryptography\Cryptography\Cryptography\obj\Debug\netcoreapp1.1\Cryptography.AssemblyInfo.cs
+C:\Users\shubhamp.GIST\Documents\GitHub\cryptography\Cryptography\Cryptography\obj\Debug\netcoreapp1.1\Cryptography.dll
+C:\Users\shubhamp.GIST\Documents\GitHub\cryptography\Cryptography\Cryptography\obj\Debug\netcoreapp1.1\Cryptography.pdb

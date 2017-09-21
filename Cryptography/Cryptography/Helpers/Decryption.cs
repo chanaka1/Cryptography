@@ -1,16 +1,17 @@
 ﻿using Cryptography.Interfaces;
 using Chilkat;
 using System;
+using System.Linq;
 using System.Text;
 
 namespace Cryptography.Helpers
 {
-    class Decryption
+    internal class Decryption
     {
 
         public static string DecryptString(Crypt2 crypt, string text, int srno)
         {
-            ICryptography s = CryptoManager.FactoryMethod(srno) as ICryptography;
+            var s = CryptoManager.FactoryMethod(srno) as ICryptography;
             s.Configure(crypt);
             return crypt.DecryptStringENC(text);
         }
@@ -23,18 +24,14 @@ namespace Cryptography.Helpers
 
         public static string MultipleDecryptions(Crypt2 crypt, string decryptedText, char[] charArray)
         {
-            foreach (var number in charArray)
-            {
-                decryptedText = DecryptString(crypt, decryptedText, Convert.ToInt32(number.ToString()));
-            }
-            return decryptedText;
+            return charArray.Aggregate(decryptedText, (current, number) => DecryptString(crypt, current, Convert.ToInt32(number.ToString())));
         }
 
 
         public static string Base64ToNormalString(string base64text)
         {
 
-            byte[] byteArray = Convert.FromBase64String(base64text);
+            var byteArray = Convert.FromBase64String(base64text);
 
             return Encoding.UTF8.GetString(byteArray);
         }

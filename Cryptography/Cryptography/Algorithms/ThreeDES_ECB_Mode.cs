@@ -40,12 +40,12 @@ namespace Cryptography.Algorithms
             //  ECB mode does not use an IV.
             //  The length of the IV is equal to the algorithm's block size.
             //  It is NOT equal to the length of the key.
-            string ivHex = "0001020304050607";
+            const string ivHex = "0001020304050607";
             crypt.SetEncodedIV(ivHex, "hex");
 
             //  The secret key must equal the size of the key.  For
             //  3DES, the key must be 24 bytes (i.e. 192-bits).
-            string keyHex = Keys.ThreeDES_ECB_Mode_KeyString;
+            var keyHex = Keys.ThreeDES_ECB_Mode_KeyString;
             crypt.SetEncodedKey(keyHex, "hex");
 
         }

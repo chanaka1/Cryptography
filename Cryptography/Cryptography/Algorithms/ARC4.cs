@@ -39,7 +39,7 @@ namespace Cryptography.Algorithms
 
             //  The secret key must equal the size of the key.
             //  For 128-bit encryption, the binary secret key is 16 bytes.
-            string keyHex = Keys.ARC4_KeyString;
+            var keyHex = Keys.ARC4_KeyString;
 
             crypt.SetEncodedKey(keyHex, "hex");
 

@@ -43,12 +43,12 @@ namespace Cryptography.Algorithms
             //  use 8 bytes (64-bits) for the count.
 
             //  This example duplicates Test Vector #3 (for ChaCha20 encryption) from RFC 7539.
-            string ivHex = "000000000000000000000002";
+            const string ivHex = "000000000000000000000002";
             crypt.SetEncodedIV(ivHex, "hex");
 
             crypt.InitialCount = 42;
 
-            string keyHex = Keys.ChaCha20_KeyString;
+            var keyHex = Keys.ChaCha20_KeyString;
 
             crypt.SetEncodedKey(keyHex, "hex");
 

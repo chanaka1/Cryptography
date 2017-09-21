@@ -33,7 +33,7 @@ namespace Cryptography.Algorithms
             //  The Digest-MD5 algorithm produces a 16-byte hash (i.e. 128 bits)
             crypt.HashAlgorithm = "md5";
 
-            string keyHex = crypt.HashStringENC(Keys.TwoKey_TripleDES_112bits_KeyString);
+            var keyHex = crypt.HashStringENC(Keys.TwoKey_TripleDES_112bits_KeyString);
 
             //  Set the encryption key:
             crypt.SetEncodedKey(keyHex, "hex");

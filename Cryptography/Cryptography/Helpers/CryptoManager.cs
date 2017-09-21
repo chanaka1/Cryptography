@@ -8,9 +8,9 @@ namespace Cryptography.Helpers
     public sealed class CryptoManager
     {
         private static volatile CryptoManager instance;
-        private static Crypt2 crypt;
-        private static object syncRoot = new Object();
-        private readonly string dateTime = DateTime.Now.ToString("dhmsf");
+        private static Crypt2 _crypt;
+        private static readonly object syncRoot = new object();
+        private readonly string _dateTime = DateTime.Now.ToString("dhmsf");
 
 
         private CryptoManager() { }
@@ -27,16 +27,14 @@ namespace Cryptography.Helpers
         {
             get
             {
-                if (instance == null)
+                if (instance != null) return instance;
+
+                lock (syncRoot)
                 {
-                    lock (syncRoot)
-                    {
-                        if (instance == null)
-                        {
-                            instance = new CryptoManager();
-                            crypt = Crypt.Instance;
-                        }
-                    }
+                    if (instance != null) return instance;
+
+                    instance = new CryptoManager();
+                    _crypt = Crypt.Instance;
                 }
 
                 return instance;
@@ -46,9 +44,9 @@ namespace Cryptography.Helpers
 
         public string Encrypt(string text)
         {
-            char[] arr = dateTime.ToCharArray();
-            string encryptedtext = Encryption.MultipleEncryptions(crypt, text, arr);
-            encryptedtext = Encryption.TextFormatter(encryptedtext, dateTime.ToString());
+            var arr = _dateTime.ToCharArray();
+            var encryptedtext = Encryption.MultipleEncryptions(_crypt, text, arr);
+            encryptedtext = Encryption.TextFormatter(encryptedtext, _dateTime.ToString());
             return Encryption.ToBase64String(encryptedtext);
         }
 
@@ -57,10 +55,10 @@ namespace Cryptography.Helpers
         public string Decrypt(string text)
         {
             text = Decryption.Base64ToNormalString(text);
-            string decryptedText = Decryption.GetDecryptedText(text);
-            char[] arr = Decryption.GetDateTimeTextArray(text);
+            var decryptedText = Decryption.GetDecryptedText(text);
+            var arr = Decryption.GetDateTimeTextArray(text);
             Array.Reverse(arr);
-            decryptedText = Decryption.MultipleDecryptions(crypt, decryptedText, arr);
+            decryptedText = Decryption.MultipleDecryptions(_crypt, decryptedText, arr);
             return decryptedText;
         }
         

@@ -3,12 +3,10 @@ using System;
 
 namespace Cryptography.Helpers
 {
-    sealed class Crypt
+    internal static class Crypt
     {
-        private static volatile Crypt2 instance;
-        private static object syncRoot = new Object();
-
-        private Crypt() { }
+        private static volatile Crypt2 _instance;
+        private static readonly object SyncRoot = new object();
 
 
         //This approach ensures that only one instance is created and only when the instance is needed.
@@ -22,16 +20,15 @@ namespace Cryptography.Helpers
         {
             get
             {
-                if (instance == null)
+                if (_instance != null) return _instance;
+
+                lock (SyncRoot)
                 {
-                    lock (syncRoot)
-                    {
-                        if (instance == null)
-                            instance = new Crypt2();
-                    }
+                    if (_instance == null)
+                        _instance = new Crypt2();
                 }
 
-                return instance;
+                return _instance;
             }
         }
     }

@@ -1,16 +1,17 @@
 ﻿using Cryptography.Interfaces;
 using Chilkat;
 using System;
+using System.Linq;
 using System.Text;
 
 namespace Cryptography.Helpers
 {
-    class Encryption
+    internal class Encryption
     {
         public static string EncryptString(Crypt2 crypt,string text, int srno)
         {
-            ICryptography s = CryptoManager.FactoryMethod(srno) as ICryptography;
-            s.Configure(crypt);
+            var s = CryptoManager.FactoryMethod(srno) as ICryptography;
+            s?.Configure(crypt);
             return crypt.EncryptStringENC(text);
         }
 
@@ -22,16 +23,12 @@ namespace Cryptography.Helpers
 
         public static string MultipleEncryptions(Crypt2 crypt, string encryptedtext, char[] charArray)
         {
-            foreach (var number in charArray)
-            {
-                encryptedtext = EncryptString(crypt, encryptedtext, Convert.ToInt32(number.ToString()));
-            }
-            return encryptedtext;
+            return charArray.Aggregate(encryptedtext, (current, number) => EncryptString(crypt, current, Convert.ToInt32(number.ToString())));
         }
 
         public static string ToBase64String(string encryptedtext)
         {
-            byte[] byteArray = Encoding.ASCII.GetBytes(encryptedtext);
+            var byteArray = Encoding.ASCII.GetBytes(encryptedtext);
             return Convert.ToBase64String(byteArray);
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace Cryptography.Helpers
 {
-    class Keys
+    internal class Keys
     {
         public static string AES_KeyString => "000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F";
 

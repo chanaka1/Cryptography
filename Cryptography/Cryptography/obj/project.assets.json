@@ -7596,11 +7596,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\shubhamp.GIST\\Documents\\Visual Studio 2017\\Projects\\Cryptography\\Cryptography\\Cryptography.csproj",
+      "projectUniqueName": "C:\\Users\\shubhamp.GIST\\Documents\\GitHub\\cryptography\\Cryptography\\Cryptography\\Cryptography.csproj",
       "projectName": "Cryptography",
-      "projectPath": "C:\\Users\\shubhamp.GIST\\Documents\\Visual Studio 2017\\Projects\\Cryptography\\Cryptography\\Cryptography.csproj",
+      "projectPath": "C:\\Users\\shubhamp.GIST\\Documents\\GitHub\\cryptography\\Cryptography\\Cryptography\\Cryptography.csproj",
       "packagesPath": "C:\\Users\\shubhamp.GIST\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shubhamp.GIST\\Documents\\Visual Studio 2017\\Projects\\Cryptography\\Cryptography\\obj\\",
+      "outputPath": "C:\\Users\\shubhamp.GIST\\Documents\\GitHub\\cryptography\\Cryptography\\Cryptography\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\shubhamp.GIST\\AppData\\Roaming\\NuGet\\NuGet.Config",
